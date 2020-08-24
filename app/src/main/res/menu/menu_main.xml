@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gunho0406.voca.MainActivity">
+    <!--<item
+        android:id="@+id/action_hidekor"
+        android:orderInCategory="100"
+        android:title="한글 가리기"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_hideeng"
+        android:orderInCategory="100"
+        android:title="영어 가리기"
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_who"
+        android:orderInCategory="100"
+        android:title="누가 만들었는가?"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/quiz"
+        android:orderInCategory="100"
+        android:title="퀴즈"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_school_black_24dp"/>
+
+    <!--<item
+        android:id="@+id/adj"
+        android:orderInCategory="100"
+        android:title="글자 크기 조정"
+        app:showAsAction="never" />-->
+</menu>
