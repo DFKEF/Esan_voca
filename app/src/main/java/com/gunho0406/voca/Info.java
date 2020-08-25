@@ -58,5 +58,6 @@ public class Info extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //dddd
     }
 }
