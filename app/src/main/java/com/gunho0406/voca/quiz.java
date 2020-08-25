@@ -3,14 +3,16 @@ package com.gunho0406.voca;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
 import com.google.android.material.snackbar.Snackbar;
+
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -74,26 +76,24 @@ public class quiz extends AppCompatActivity {
                 String fu = setDict(num);
 
 
-                    for(int i=0; i<list.size(); i++) {
-                        if(fu==english.get(i)) {
-                            answer = korea.get(i);
-                        if(fu==korea.get(i)) {
-                            answer = english.get(i);
-                            //ggview.setText(answer);
-                            break;
-                        }
+                for(int i=0; i<list.size(); i++) {
+                    if(fu==korea.get(i)) {
+                        answer = english.get(i);
+                        //ggview.setText(answer);
+                        break;
                     }
-                    text1 = arrayList.get(0);
-                    text2 = arrayList.get(1);
-                    text3 = arrayList.get(2);
-                    text4 = arrayList.get(3);
+                }
+                text1 = arrayList.get(0);
+                text2 = arrayList.get(1);
+                text3 = arrayList.get(2);
+                text4 = arrayList.get(3);
 
-                        buttons[0].setOnClickListener(new Button.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                click(answer, text1, view, text[0]);
-                            }
-                        });
+                buttons[0].setOnClickListener(new Button.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        click(answer, text1, view, text[0]);
+                    }
+                });
 
                 buttons[1].setOnClickListener(new Button.OnClickListener() {
                     @Override
@@ -134,14 +134,11 @@ public class quiz extends AppCompatActivity {
 
     public String setDict(int num) {
         String one = null;
-        String text = rankor.get(num);
         String text = raneng.get(num);
         int hi;
         Random random = new Random();
         hi = random.nextInt(4);
         for(int q=0; q<list.size(); q++) {
-            if(text==korea.get(q)) {
-                one = String.valueOf(english.get(q));
             if(text==english.get(q)) {
                 one = String.valueOf(korea.get(q));
                 break;
@@ -152,11 +149,6 @@ public class quiz extends AppCompatActivity {
         return one;
     }
 
-    public String answerDict(String eng) {
-        String ans = null;
-        for(int i=0; i<list.size(); i++) {
-            if(eng==english.get(i)) {
-                ans = String.valueOf(korea.get(i));
     public String answerDict(String kor) {
         String ans = null;
         for(int i=0; i<list.size(); i++) {
@@ -175,8 +167,6 @@ public class quiz extends AppCompatActivity {
         ArrayList<String> arrayList = new ArrayList<>();
         int neinom;
         for(int i=0; i<list.size(); i++) {
-            if(answer==english.get(i)) {
-                hi = String.valueOf(korea.get(i));
             if(answer==korea.get(i)) {
                 hi = String.valueOf(english.get(i));
                 neinom = i;
@@ -188,11 +178,6 @@ public class quiz extends AppCompatActivity {
         Random random = new Random();
         for(int t=0; t<=3; t++) {
             int loop = random.nextInt(list.size());
-            String test = korea.get(loop);
-            if(test==hi) {
-                        t=t-1;
-            }else {
-                arrayList.add(korea.get(loop));
             String test = english.get(loop);
             if(test==hi) {
                 t=t-1;
@@ -236,7 +221,7 @@ public class quiz extends AppCompatActivity {
     public int click(String answer, String text1, View view, String text) {
         int u = 0;
         if(answer==text1) {
-            Snackbar.make(view,"정답", Snackbar.LENGTH_SHORT).setBackgroundTint(Color.parseColor("#4caf50")).show();
+            Snackbar.make(view,"정답",Snackbar.LENGTH_SHORT).setBackgroundTint(Color.parseColor("#4caf50")).show();
             u = 10;
             if(num==list.size()-1) {
                 onBackPressed();
@@ -246,7 +231,7 @@ public class quiz extends AppCompatActivity {
             }
 
         }else{
-            Snackbar.make(view,"오답", Snackbar.LENGTH_SHORT).setBackgroundTint(Color.parseColor("#f44336")).show();
+            Snackbar.make(view,"오답",Snackbar.LENGTH_SHORT).setBackgroundTint(Color.parseColor("#f44336")).show();
             u = 5;
         }
         return u;

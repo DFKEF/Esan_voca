@@ -21,8 +21,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         this.englist = englist;
         this.korlist = korlist;
     }
-    //
-
 
 
     class ViewHolder extends RecyclerView.ViewHolder {
