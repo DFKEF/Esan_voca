@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\gunho\\AndroidStudioProjects\\voca\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-cs\\values-cs.xml",
+            "outputFile": "C:\\Users\\gunho\\AndroidStudioProjects\\Esan_voca\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-cs\\values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gunho\\.gradle\\caches\\transforms-2\\files-2.1\\4534d3e1b8a71c444b8e591b991febaa\\core-1.3.0\\res\\values-cs\\values-cs.xml",

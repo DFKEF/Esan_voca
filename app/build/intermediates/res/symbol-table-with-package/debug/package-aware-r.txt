@@ -1524,7 +1524,6 @@ id action_who
 id actions
 id activity_chooser_view_content
 id add
-id adj
 id alertTitle
 id all
 id always
