@@ -75,6 +75,8 @@ public class quiz extends AppCompatActivity {
 
 
                     for(int i=0; i<list.size(); i++) {
+                        if(fu==english.get(i)) {
+                            answer = korea.get(i);
                         if(fu==korea.get(i)) {
                             answer = english.get(i);
                             //ggview.setText(answer);
@@ -132,11 +134,14 @@ public class quiz extends AppCompatActivity {
 
     public String setDict(int num) {
         String one = null;
+        String text = rankor.get(num);
         String text = raneng.get(num);
         int hi;
         Random random = new Random();
         hi = random.nextInt(4);
         for(int q=0; q<list.size(); q++) {
+            if(text==korea.get(q)) {
+                one = String.valueOf(english.get(q));
             if(text==english.get(q)) {
                 one = String.valueOf(korea.get(q));
                 break;
@@ -147,6 +152,11 @@ public class quiz extends AppCompatActivity {
         return one;
     }
 
+    public String answerDict(String eng) {
+        String ans = null;
+        for(int i=0; i<list.size(); i++) {
+            if(eng==english.get(i)) {
+                ans = String.valueOf(korea.get(i));
     public String answerDict(String kor) {
         String ans = null;
         for(int i=0; i<list.size(); i++) {
@@ -165,6 +175,8 @@ public class quiz extends AppCompatActivity {
         ArrayList<String> arrayList = new ArrayList<>();
         int neinom;
         for(int i=0; i<list.size(); i++) {
+            if(answer==english.get(i)) {
+                hi = String.valueOf(korea.get(i));
             if(answer==korea.get(i)) {
                 hi = String.valueOf(english.get(i));
                 neinom = i;
@@ -176,6 +188,11 @@ public class quiz extends AppCompatActivity {
         Random random = new Random();
         for(int t=0; t<=3; t++) {
             int loop = random.nextInt(list.size());
+            String test = korea.get(loop);
+            if(test==hi) {
+                        t=t-1;
+            }else {
+                arrayList.add(korea.get(loop));
             String test = english.get(loop);
             if(test==hi) {
                 t=t-1;
