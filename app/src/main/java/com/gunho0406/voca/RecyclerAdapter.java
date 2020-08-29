@@ -28,11 +28,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         private TextView english;
         private TextView korean;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             super(itemView);
             english = (TextView) itemView.findViewById(R.id.eng);
             korean = (TextView) itemView.findViewById(R.id.kor);
-
         }
 
     }

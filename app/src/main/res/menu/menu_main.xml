@@ -25,9 +25,4 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_school_black_24dp"/>
 
-    <!--<item
-        android:id="@+id/adj"
-        android:orderInCategory="100"
-        android:title="글자 크기 조정"
-        app:showAsAction="never" />-->
 </menu>
