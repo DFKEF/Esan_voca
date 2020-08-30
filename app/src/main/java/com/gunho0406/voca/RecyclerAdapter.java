@@ -1,11 +1,14 @@
 package com.gunho0406.voca;
 
 import android.app.Activity;
+import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -15,6 +18,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private ArrayList<String> englist = new ArrayList<>();
     private ArrayList<String> korlist = new ArrayList<>();
     private Activity activity;
+    private Context context;
 
     public RecyclerAdapter(MainActivity activity, ArrayList<String> englist, ArrayList<String> korlist) {
         this.activity = activity;
@@ -32,6 +36,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             super(itemView);
             english = (TextView) itemView.findViewById(R.id.eng);
             korean = (TextView) itemView.findViewById(R.id.kor);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    if (pos != RecyclerView.NO_POSITION) {
+                        CustomDialog customDialog = new CustomDialog(v.getContext());
+                        String korean = korlist.get(pos);
+                        String english = englist.get(pos);
+                        customDialog.callFunction(english, korean);
+                    }
+                }
+            });
         }
 
     }
