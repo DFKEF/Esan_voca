@@ -20,7 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="80dp">
+                android:padding="80dp"
+                android:layout_gravity="center">
 
                 <TextView
                     android:id="@+id/dict"
@@ -35,16 +36,17 @@
             </LinearLayout>
 
             <GridLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
                 android:orientation="horizontal"
-                android:rowCount="2">
+                android:rowCount="2"
+                android:layout_gravity="center">
 
                 <Button
                     android:id="@+id/btn1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="left"
                     android:layout_margin="20dp"
                     android:background="@drawable/button"
@@ -53,8 +55,8 @@
 
                 <Button
                     android:id="@+id/btn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="right"
                     android:layout_margin="20dp"
                     android:background="@drawable/button"
@@ -63,8 +65,8 @@
 
                 <Button
                     android:id="@+id/btn3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="left"
                     android:layout_margin="20dp"
                     android:background="@drawable/button"
@@ -73,8 +75,8 @@
 
                 <Button
                     android:id="@+id/btn4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="right"
                     android:layout_margin="20dp"
                     android:background="@drawable/button"
@@ -86,7 +88,7 @@
                 android:id="@+id/fake"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center|bottom"
                 android:layout_margin="40dp"
                 android:text="넘기기" />
 
