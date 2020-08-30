@@ -1,4 +1,4 @@
-#Mon Aug 31 01:57:14 KST 2020
+#Mon Aug 31 02:07:05 KST 2020
 base.0=/home/gunho/StudioProjects/Esan_voca/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
